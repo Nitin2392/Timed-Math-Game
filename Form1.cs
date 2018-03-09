@@ -12,7 +12,7 @@ namespace DXBall_Game
 {
     public partial class Form1 : Form
     {
-        public int randVarA, randVarB, timeStart;
+        public int randVarA, randVarB, timeStart, score=0;
 
         private void timerClock_Tick(object sender, EventArgs e)
         {
@@ -26,15 +26,17 @@ namespace DXBall_Game
                 timerClock.Stop();
                 lblTimer.Text= "";
                 lblSorF.Text = "Time's Up Loser!";
+                score -= 1;
                 btnStart.Enabled = true;
                 btnSubmit.Enabled = false;
             }
+            lbResult.Text = score.ToString();
         }
 
         private void Form1_Load(object sender, EventArgs e)
         {
             timerClock.Enabled = true;
-            timerClock.Stop();
+            timerClock.Stop();            
         }
 
         private void btnSubmit_Click(object sender, EventArgs e)
@@ -45,13 +47,17 @@ namespace DXBall_Game
             {
                 timerClock.Stop();
                 lblSorF.Text = "Good job sucker!";
+                score += 1;
             }
             else
             {
                 timerClock.Stop();
                 lblSorF.Text = "Dafuq dude! Learn some math";
+                score -= 1;
             }
             txtInput.Text = "";
+            lblTimer.Text = "";
+            lbResult.Text = score.ToString();
         }
 
         public Form1()
@@ -69,9 +75,10 @@ namespace DXBall_Game
             randVarB = random.Next(25);
             lblFirst.Text = randVarA.ToString();
             lblSecond.Text = randVarB.ToString();
-
+            lblSorF.Text = "";
             //Timer should start here
             timerClock.Start();
+            lbResult.Text = score.ToString();
 
         }
     }
