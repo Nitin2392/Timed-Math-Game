@@ -40,6 +40,8 @@
             this.lblTimerInfo = new System.Windows.Forms.Label();
             this.lblTimer = new System.Windows.Forms.Label();
             this.lblSorF = new System.Windows.Forms.Label();
+            this.lbScore = new System.Windows.Forms.Label();
+            this.lbResult = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // btnStart
@@ -87,7 +89,7 @@
             // 
             this.lblCalc.AutoSize = true;
             this.lblCalc.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCalc.Location = new System.Drawing.Point(245, 155);
+            this.lblCalc.Location = new System.Drawing.Point(255, 155);
             this.lblCalc.Name = "lblCalc";
             this.lblCalc.Size = new System.Drawing.Size(47, 46);
             this.lblCalc.TabIndex = 4;
@@ -146,12 +148,33 @@
             this.lblSorF.Size = new System.Drawing.Size(0, 46);
             this.lblSorF.TabIndex = 9;
             // 
+            // lbScore
+            // 
+            this.lbScore.AutoSize = true;
+            this.lbScore.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbScore.Location = new System.Drawing.Point(97, 40);
+            this.lbScore.Name = "lbScore";
+            this.lbScore.Size = new System.Drawing.Size(148, 46);
+            this.lbScore.TabIndex = 10;
+            this.lbScore.Text = "Score: ";
+            // 
+            // lbResult
+            // 
+            this.lbResult.AutoSize = true;
+            this.lbResult.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbResult.Location = new System.Drawing.Point(245, 40);
+            this.lbResult.Name = "lbResult";
+            this.lbResult.Size = new System.Drawing.Size(0, 46);
+            this.lbResult.TabIndex = 11;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlDark;
             this.ClientSize = new System.Drawing.Size(975, 548);
+            this.Controls.Add(this.lbResult);
+            this.Controls.Add(this.lbScore);
             this.Controls.Add(this.lblSorF);
             this.Controls.Add(this.lblTimer);
             this.Controls.Add(this.lblTimerInfo);
@@ -183,6 +206,8 @@
         private System.Windows.Forms.Label lblTimerInfo;
         private System.Windows.Forms.Label lblTimer;
         private System.Windows.Forms.Label lblSorF;
+        private System.Windows.Forms.Label lbScore;
+        private System.Windows.Forms.Label lbResult;
     }
 }
 
